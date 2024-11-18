@@ -35,12 +35,18 @@ public class CreateUserPostCallTest {
 		playwright.close();
 	}
 	
+	public static String getRandomEmail() {
+		String emailId = "testpwautomation"+ System.currentTimeMillis()+"@gmail.com";
+		System.out.println("Email id : "+emailId);
+		return emailId;
+	}
+	
 	@Test
 	public void createUserTest() throws IOException {
 		
 		Map<String, Object> data = new HashMap<String, Object>();
 		data.put("name", "RamAutomation");
-		data.put("email", "ramkumarsampss@gmail.com");
+		data.put("email", getRandomEmail());
 		data.put("gender", "Male");
 		data.put("status", "active");
 		
@@ -61,5 +67,21 @@ public class CreateUserPostCallTest {
 		ObjectMapper objectMapper = new ObjectMapper();
 		JsonNode postJsonResponse = objectMapper.readTree(apiPostResponse.body());
 		System.out.println(postJsonResponse.toPrettyString());
+		
+		//Capture id from the post json response
+		String userid = postJsonResponse.get("id").asText();
+		System.out.println("user id : "+userid);
+		
+		//GET Call: Fetch the same user id
+		APIResponse apiGetResponse = requestContext.get("https://gorest.co.in/public/v2/users/"+userid, 
+				RequestOptions.create()
+					.setHeader("Authorization", "Bearer b0d22025200b28f8f689282d38896494eccec09288a7155deb1ca8b3dc78b99e"));
+		
+			Assert.assertEquals(apiGetResponse.status(), 200);
+			Assert.assertEquals(apiGetResponse.statusText(), "OK");	
+			
+			System.out.println(apiGetResponse.text());
+			
+			Assert.assertTrue(apiGetResponse.text().contains(userid));
 	}
 }
