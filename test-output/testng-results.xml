@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-18T01:49:23 IST" name="Default suite" finished-at="2024-11-18T01:49:26 IST" duration-ms="3826">
+  <suite started-at="2024-11-23T01:51:23 IST" name="Default suite" finished-at="2024-11-23T01:51:27 IST" duration-ms="3431">
     <groups>
     </groups>
-    <test started-at="2024-11-18T01:49:23 IST" name="Default test" finished-at="2024-11-18T01:49:26 IST" duration-ms="3826">
-      <class name="com.qa.api.tests.CreateUserPostCallTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.qa.api.tests.CreateUserPostCallTest@a4102b8]" started-at="2024-11-18T01:49:23 IST" name="setup" finished-at="2024-11-18T01:49:25 IST" duration-ms="1881" status="PASS">
+    <test started-at="2024-11-23T01:51:23 IST" name="Default test" finished-at="2024-11-23T01:51:27 IST" duration-ms="3431">
+      <class name="com.qa.api.tests.CreateUserWithJsonFileTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.qa.api.tests.CreateUserWithJsonFileTest@11dc3715]" started-at="2024-11-23T01:51:23 IST" name="setup" finished-at="2024-11-23T01:51:25 IST" duration-ms="1831" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="createUserTest()[pri:0, instance:com.qa.api.tests.CreateUserPostCallTest@a4102b8]" started-at="2024-11-18T01:49:25 IST" name="createUserTest" finished-at="2024-11-18T01:49:26 IST" duration-ms="1931" status="PASS">
+        <test-method signature="createUserTest()[pri:0, instance:com.qa.api.tests.CreateUserWithJsonFileTest@11dc3715]" started-at="2024-11-23T01:51:25 IST" name="createUserTest" finished-at="2024-11-23T01:51:27 IST" duration-ms="1581" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createUserTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.api.tests.CreateUserPostCallTest@a4102b8]" started-at="2024-11-18T01:49:26 IST" name="tearDown" finished-at="2024-11-18T01:49:26 IST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.api.tests.CreateUserWithJsonFileTest@11dc3715]" started-at="2024-11-23T01:51:27 IST" name="tearDown" finished-at="2024-11-23T01:51:27 IST" duration-ms="5" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.qa.api.tests.CreateUserPostCallTest -->
+      </class> <!-- com.qa.api.tests.CreateUserWithJsonFileTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
